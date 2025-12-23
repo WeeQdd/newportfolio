@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Antipov Arseniy • Портфолио</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body class="bg-dark text-light">
+
+<header class="py-3 border-bottom border-secondary">
+  <div class="container d-flex justify-content-between align-items-center">
+
+    <div class="d-flex align-items-center gap-2">
+      <a href="index.html" class="d-flex align-items-center text-decoration-none">
+        <img src="static/img/logo-small.png"
+             alt="WeQd"
+             style="height:28px;width:auto;margin-right:8px;">
+        <span class="fs-4 fw-bold text-light">Antipov Arseniy</span>
+      </a>
+    </div>
+
+    <nav class="d-flex gap-3">
+      <a href="index.html" class="link-light text-decoration-none">Главная</a>
+      <a href="about.html" class="link-light text-decoration-none">Обо мне</a>
+      <a href="course1/index.html" class="link-light text-decoration-none">1 курс</a>
+      <a href="course2/index.html" class="link-light text-decoration-none">2 курс</a>
+      <a href="course3/index.html" class="link-light text-decoration-none">3 курс</a>
+      <a href="course4/index.html" class="link-light text-decoration-none">4 курс</a>
+      <a href="courses/index.html" class="link-light text-decoration-none">Курсовые</a>
+      <a href="practic/index.html" class="link-light text-decoration-none">Практики</a>
+    </nav>
+
+  </div>
+</header>
+
+<main class="container py-5 text-center">
+  <img src="static/img/logo.png"
+       alt="WeQd logo"
+       class="mb-4"
+       style="max-width:320px;width:80%;height:auto;">
+
+  <h1 class="mb-3">Antipov Arseniy</h1>
+  <p class="text-secondary mb-4 fs-5">
+    Портфолио учебных работ по ИТ‑дисциплинам.
+  </p>
+
+  <div class="d-flex justify-content-center mt-4">
+    <div class="d-flex gap-3">
+      <a href="https://github.com/WeQdd/"
+         class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center"
+         style="width:48px;height:48px;"
+         target="_blank" rel="noopener">
+        <i class="bi bi-github"></i>
+      </a>
+      <a href="https://t.me/WeeQqd"
+         class="btn btn-outline-info rounded-circle d-flex align-items-center justify-content-center"
+         style="width:48px;height:48px;"
+         target="_blank" rel="noopener">
+        <i class="bi bi-telegram"></i>
+      </a>
+    </div>
+  </div>
+
+
+</main>
+
+<footer class="py-4 border-top border-secondary mt-auto">
+  <div class="container small text-secondary text-center">
+    © 2025 Antipov Arseniy.
+  </div>
+</footer>
+
+<script>
+window.addEventListener('DOMContentLoaded', function() {
+  // Парсим текущий путь
+  const path = window.location.pathname;
+  
+  // Если не главная страница и не файл/папка
+  if (path !== '/' && !path.match(/\.(css|png|jpg|jpeg|gif|ico|svg)$/)) {
+    // Перенаправляем на главную с хэшем или используем History API
+    window.history.replaceState({}, '', '/#' + path.slice(1));
+    // Или используйте pushState для чистых URL
+    // window.history.pushState({}, '', '/');
+  }
+  
+  // Обработка History API для SPA
+  window.addEventListener('popstate', function() {
+    location.reload(); // Простое решение для GitHub Pages
+  });
+});
+</script>
+  
+</body>
+</html>
