@@ -1,0 +1,16 @@
+.card-img-top {
+  max-height: 220px;
+  object-fit: cover;
+}
+
+.card.bg-secondary .card-body {
+  padding: 0.75rem 1rem;
+}
+
+.card.bg-secondary .card-title {
+  margin-bottom: 0.4rem;
+}
+
+.card.bg-secondary .card-text {
+  margin-bottom: 0.4rem;
+}
